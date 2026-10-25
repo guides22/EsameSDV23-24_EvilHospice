@@ -1,4 +1,0 @@
-repository "Retirement_Evil@guillaume03@cloud"
-  path "/"
-    br "/main"
-    co "/main"
