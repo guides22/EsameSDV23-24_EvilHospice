@@ -1,28 +1,26 @@
 # Evil Hospice
 
-**Evil Hospice** is a 2D top-down stealth-horror game prototype developed in Unity as a university project for the *Sviluppo di Videogiochi* (Video Game Development) course at the University of Bari, Italy, in 2024.
+**Evil Hospice** is a 2D top-down stealth-horror game prototype developed using Unity and C# as a university project for the *Video Game Development* course at the University of Bari, Italy, during the 2023–2024 academic year.
 
 The game follows Bob, a retired secret agent living in a nursing home whose residents have mysteriously turned into zombies after taking an experimental medication. To survive, Bob must navigate the building, avoid enemies, and use limited resources to find his way out.
 
-The project was developed as a single-level playable prototype, focusing on fundamental game development concepts such as player movement, enemy behavior, collision handling, inventory management, and level design.
+The project was developed as a **single-level playable prototype**, focusing on fundamental game development concepts such as player movement, enemy behavior, collision handling, inventory management, and level design.
 
 ## Gameplay
 
 The player explores a pixel-art environment from a top-down perspective, navigating rooms and corridors while avoiding zombies.
 
-Different enemy types pose different threats, requiring the player to choose appropriate paths and manage their resources carefully.
+Different enemy types have different movement speeds and damage values, encouraging the player to choose suitable paths and manage resources carefully.
 
 ### Features
 
 - **Top-down movement:** Explore the environment using WASD controls.
 - **Enemy encounters:** Avoid zombies with different movement speeds and damage values.
-- **Health system:** Survive enemy attacks by managing the player's four health points.
+- **Health system:** Survive enemy attacks while managing the player's four health points.
 - **Inventory system:** Collect and use consumable items found throughout the level.
 - **Power-ups:** Restore health, temporarily increase movement speed, or gain protection against enemy attacks.
 - **Game states:** Main menu, gameplay, victory, and game-over screens.
-- **Pixel-art environments:** A nursing home setting with rooms, corridors, and outdoor areas.
-
-The game currently consists of one playable level and was developed as an academic prototype rather than a complete commercial game.
+- **Pixel-art environments:** Explore indoor and outdoor areas of a zombie-infested nursing home.
 
 ## Screenshots
 
@@ -42,6 +40,32 @@ The game currently consists of one playable level and was developed as an academ
 
 ![Evil Hospice Parking Lot](docs/screenshots/parking-lot.png)
 
+## Download and Play
+
+Precompiled builds for Windows and Linux are available in the repository's GitHub Releases section.
+
+**[Download Evil Hospice — GitHub Releases](https://github.com/guides22/EvilHospice/releases)**
+
+### Windows
+
+1. Download the Windows ZIP archive from the Releases page.
+2. Extract the archive.
+3. Run the game's `.exe` file.
+
+### Linux
+
+1. Download the Linux ZIP archive from the Releases page.
+2. Extract the archive.
+3. Run the game executable.
+
+If the executable does not have execution permissions, grant them using:
+
+```bash
+chmod +x <game-executable>
+```
+
+Replace `<game-executable>` with the actual executable filename.
+
 ## Controls
 
 | Input | Action |
@@ -53,77 +77,68 @@ The game currently consists of one playable level and was developed as an academ
 
 | Technology | Purpose |
 |---|---|
-| **Unity** | Game engine, scene management, physics, and gameplay |
+| **Unity 2022.3 LTS** | Game engine, scene management, physics, and gameplay |
 | **C#** | Game logic and scripting |
 | **Tiled** | Tilemap creation and level design |
 | **LibreSprite** | Pixel-art creation and sprite editing |
 | **Visual Studio Code** | C# development |
 
-## Installation and Usage
-
-### Requirements
-
-- Unity Editor (compatible with the project's Unity version)
-- Windows or Linux for the existing standalone builds
-
-### Run from Unity
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/guides22/EsameSDV23-24_EvilHospice.git
-   ```
-
-2. Open **Unity Hub**.
-3. Select **Add project from disk** and choose the `Retirement_Evil` directory.
-4. Open the project using a compatible Unity Editor version.
-5. Open the main gameplay scene and press **Play**.
-
-### Standalone Builds
-
-The repository also contains previously compiled builds:
-
-- `BuildWindows/` — Windows version
-- `BuildLinux/` — Linux version
-
-These builds are retained for archival purposes. They were generated using an older Unity version and should be rebuilt with a security-patched Unity Editor before redistribution.
+The project was originally developed with Unity `2022.3.28f1` and later updated to `2022.3.62f2` for compatibility and security maintenance.
 
 ## Project Structure
 
 ```text
-EsameSDV23-24_EvilHospice/
-├── Retirement_Evil/       # Unity project
-│   ├── Assets/             # Scripts, scenes, sprites, audio, prefabs, etc.
-│   ├── Packages/           # Unity package configuration
-│   └── ProjectSettings/    # Unity project settings
-├── BuildWindows/           # Windows build
-├── BuildLinux/             # Linux build
+EvilHospice/
+├── Retirement_Evil/          # Unity project
+│   ├── Assets/                # Scripts, scenes, sprites, audio, prefabs, etc.
+│   ├── Packages/              # Unity package configuration
+│   └── ProjectSettings/       # Unity project settings
 ├── docs/
-│   └── screenshots/       # Gameplay screenshots
-├── Evil Hospice by MGP.pdf # Game Design Document
+│   ├── screenshots/           # Gameplay screenshots
+│   └── GameDesignDocument.pdf # Original game design document
+├── .gitignore
 └── README.md
 ```
 
+Standalone builds are distributed separately through GitHub Releases to keep the source repository focused on the Unity project and its documentation.
+
+## Game Design Document
+
+The original [Game Design Document (GDD)](docs/GameDesignDocument.pdf), written in Italian, describes the initial concept and design of Evil Hospice.
+
+It includes:
+
+- Story, setting, and characters.
+- Gameplay objectives and mechanics.
+- Player abilities, enemies, and consumable items.
+- Level design and visual style.
+- Technical tools and development choices.
+- Ideas for potential future improvements.
+
+The GDD describes the broader concept originally envisioned for the game, including features and content that were not implemented in the final prototype.
+
+This README provides an English overview of the playable version and its implemented features.
+
 ## Development and Contributions
 
-Evil Hospice was developed as a group project by three students at the University of Bari.
+Evil Hospice was developed as a university group project by three students at the University of Bari.
 
 - **Guillaume Desaphy** — Primary developer, game design, gameplay implementation, and level design.
 - **Mirko Pepe** — Game design, graphic design, and level design.
 - **Pietro Conca** — Game design and level design.
 
-The project involved designing the gameplay mechanics, implementing the game systems in Unity, creating and adapting pixel-art assets, and building the playable level.
+The project involved designing gameplay mechanics, implementing game systems in Unity, creating and adapting pixel-art assets, and building the playable level.
 
 ## Assets and Credits
 
 The game combines original artwork created for the project with freely available third-party assets, including environmental tiles, interface elements, and audio resources.
 
-Third-party assets retain their respective authors' rights and applicable license conditions.
+Third-party assets remain subject to their respective authors' rights and license conditions.
 
 ## Project Context
 
-This repository preserves the final academic prototype developed for the 2023–2024 Video Game Development course.
+This repository preserves a university game development project completed during the 2023–2024 academic year and subsequently maintained for portfolio purposes.
 
-The objective was to gain practical experience with Unity and C#, covering the main stages of game development, from initial game design and asset creation to gameplay implementation and level construction.
+The main objective was to gain practical experience in Unity and C#, covering the development process from initial game design and asset creation to gameplay implementation, level construction, and standalone builds.
 
-The original Game Design Document, written in Italian, is available in the repository: [Game Design Document](Evil%20Hospice%20by%20MGP.pdf).
+The repository is maintained primarily as an academic and software development portfolio project.
